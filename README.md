@@ -1,33 +1,16 @@
-# 💄 BEIJOCA24 — Beleza ao seu alcance
+# BEIJOCA24 — Loja online de cosméticos
 
-Loja online de cosméticos com as marcas **Inuka, Avon, Villa**, desodorantes e outras marcas.
-Os pedidos são enviados directamente para o **WhatsApp**, com **pagamento na hora da entrega**.
+Site estático (HTML + CSS + JavaScript), sem instalação.
 
-## ✨ Funcionalidades
+## Como abrir no VS Code
+1. Abra a pasta `beijoca24` no VS Code (File > Open Folder).
+2. Instale a extensão **Live Server**.
+3. Clique com o botão direito em `index.html` > **Open with Live Server**.
 
-- Menu por marca (Inuka, Avon, Villa, Desodorantes, Outras Marcas) com subcategorias
-- Produtos em destaque, com desconto e preço antigo
-- Pesquisa de produtos e filtro por categoria
-- Carrinho de compras
-- Formulário de entrega: dia, horário, localização específica e contacto para chamadas e WhatsApp
-- Mensagem do pedido gerada automaticamente e enviada para o WhatsApp da loja
-- Design responsivo (telemóvel e computador)
+## Como adicionar produtos / fotos
+- Edite `js/products.js` (categorias, subcategorias, nomes, preços).
+- Coloque as fotos em `images/<marca>/ (ver images/README.txt)` com o mesmo nome do ficheiro indicado.
 
-## 🛠️ Tecnologias
-
-HTML5, CSS3 e JavaScript puro. Não precisa de instalação nem de servidor.
-
-## 🚀 Como executar
-
-1. Clone ou descarregue o repositório
-2. Abra a pasta no VS Code
-3. Instale a extensão **Live Server**
-4. Clique com o botão direito em `index.html` > **Open with Live Server**
-
-## 🧴 Como adicionar produtos
-
-Edite o ficheiro `js/products.js` (nome, preço, categoria e foto) e coloque as imagens em `images/<marca>/`.
-
-## 📞 Contacto
-
-BEIJOCA24 · +258 87 612 8066 · +258 85 612 8066
+## Pedidos
+O cliente preenche o formulário de entrega (dia, hora, localização, contactos) e o pedido
+abre no WhatsApp **+258 87 612 8066** com a mensagem completa. Pagamento na entrega.

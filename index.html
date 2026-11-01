@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BEIJOCA24 · Beleza ao seu alcance</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="trust"><span>🚚 Entrega em Maputo e Províncias</span><span>🛡️ Compra Segura</span><span>🎧 Atendimento Rápido</span></div>
+    <div class="social">
+      <a href="#" title="Facebook">f</a><a href="#" title="Instagram">◎</a><a href="#" title="TikTok">♪</a><a href="https://wa.me/258876128066" target="_blank" title="WhatsApp">✆</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <a href="#inicio" class="logo">
+    <img src="images/logo.png" alt="" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()">
+    <span class="logo-txt"><b>BEIJOCA24</b><small>Beleza ao seu alcance ♡</small></span>
+  </a>
+  <div class="searchbox">
+    <input id="search" type="search" placeholder="O que procura?">
+    <button id="searchBtn" aria-label="Pesquisar">🔍</button>
+  </div>
+  <div class="phones">
+    <span class="ico">📞</span>
+    <div><a href="tel:+258876128066">+258 87 612 8066</a><a href="tel:+258856128066">+258 85 612 8066</a></div>
+  </div>
+  <button id="cartBtn" class="cart-top" aria-label="Carrinho">🛒<span id="cartCount">0</span></button>
+  <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+</header>
+
+<nav id="nav" class="nav">
+  <ul id="menu"></ul>
+  <button id="cartBtn2" class="nav-cart">🛒 O Meu Carrinho</button>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <h1>Cuide da sua beleza<br>com <span>BEIJOCA24</span></h1>
+    <p>Cosméticos de qualidade, para você se sentir ainda mais bonita e confiante!</p>
+    <a href="#produtos" class="btn" data-all>Comprar Agora →</a>
+  </div>
+  <div class="hero-script">Beleza<br>em cada<br>detalhe ♡</div>
+</section>
+
+<section class="brands" id="brandCards"></section>
+
+<section id="produtos" class="shop">
+  <aside class="side">
+    <div class="side-head">☰ Categorias</div>
+    <ul id="sideList"></ul>
+  </aside>
+  <div class="main">
+    <div class="main-head">
+      <h2 id="titulo">★ Produtos em Destaque</h2>
+      <a href="#produtos" id="verTodos">Ver Todos →</a>
+    </div>
+    <div id="subChips" class="sub-chips"></div>
+    <div id="grid" class="grid"></div>
+  </div>
+</section>
+
+<section id="sobre" class="info">
+  <h2>Sobre Nós</h2>
+  <p><strong>BEIJOCA24</strong> é a sua loja de cosméticos em Maputo. Trabalhamos com Inuka, Avon, Villa, desodorantes e muitas outras marcas de beleza e cuidado pessoal. Faça o seu pedido online, ele chega directamente ao nosso WhatsApp e entregamos no dia e hora que escolher, com pagamento na hora da entrega.</p>
+</section>
+<section id="contacto" class="info alt">
+  <h2>Contacto</h2>
+  <p>📞 <a href="tel:+258876128066">+258 87 612 8066</a> &nbsp; 📞 <a href="tel:+258856128066">+258 85 612 8066</a><br>
+  💬 <a href="https://wa.me/258876128066" target="_blank">Falar no WhatsApp</a></p>
+</section>
+
+<footer class="footer">
+  <div><b>BEIJOCA24</b> <span>|</span> Beleza ao seu alcance ♡</div>
+  <div class="f-phones">📞 +258 87 612 8066 &nbsp;&nbsp; +258 85 612 8066</div>
+  <div class="f-links"><a href="#sobre">Sobre Nós</a> <span>|</span> <a href="#contacto">Contacto</a></div>
+</footer>
+
+<!-- Carrinho -->
+<aside id="drawer" class="drawer">
+  <div class="drawer-head"><h3>O meu carrinho</h3><button id="closeCart">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="drawer-foot">
+    <div class="total">Total: <strong id="cartTotal">0 MT</strong></div>
+    <button id="checkoutBtn" class="btn full">Finalizar Pedido</button>
+  </div>
+</aside>
+<div id="overlay" class="overlay"></div>
+
+<!-- Finalizar Pedido -->
+<div id="modal" class="modal">
+  <form id="orderForm" class="modal-box">
+    <div class="modal-head">🛒 Finalizar Pedido <button type="button" id="cancelOrder">✕</button></div>
+    <div class="modal-body">
+      <h4>Dados da Entrega</h4>
+      <label>Nome completo *<input name="nome" required></label>
+      <label>📅 Dia da Entrega *<input name="dia" type="date" required></label>
+      <label>🕒 Horário Preferencial *<input name="hora" type="time" required></label>
+      <label>📍 Localização Específica *<textarea name="local" rows="2" required placeholder="Ex: Bairro, Rua, Casa nº..."></textarea></label>
+      <label>🗺️ Link do mapa (opcional)<input name="maps" placeholder="Link do Google Maps"></label>
+      <label>📞 Contacto para Chamadas *<input name="tel" type="tel" required placeholder="Ex: +258 87 123 4567"></label>
+      <label>💬 Número de WhatsApp *<input name="wpp" type="tel" required placeholder="Ex: +258 87 123 4567"></label>
+      <label>Observações (opcional)<textarea name="obs" rows="2"></textarea></label>
+      <h4>Método de Pagamento</h4>
+      <label class="radio"><input type="radio" name="pagamento" value="Na Hora da Entrega" checked> 💵 Na Hora da Entrega</label>
+      <button type="submit" class="btn full wpp">Enviar Pedido pelo WhatsApp</button>
+    </div>
+  </form>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
